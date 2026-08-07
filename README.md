@@ -46,7 +46,7 @@ Ten queries answer core business questions, including:
 - Shipping mode vs. margin
 - Monthly sales seasonality
 
-See [`superstore_queries.sql`](./superstore queries.sql) for the full set, each with an inline comment explaining the business question it answers.
+See superstore queries.sql for the full set, each with an inline comment explaining the business question it answers.
 
 ## Power BI Dashboard
 
