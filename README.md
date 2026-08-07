@@ -1,2 +1,73 @@
-# superstore-sales-profitability-analysis
-End-to-end data analytics pipeline on the Sample Superstore dataset — Python/Pandas for cleaning, MySQL for storage, and SQL for business insight queries on sales, profit, and discount performance. 
+# Superstore Sales & Profitability Analysis
+
+End-to-end data analytics pipeline on the Sample Superstore dataset — cleaned with Python/Pandas, loaded into MySQL, queried for business insights, and visualized in an interactive Power BI dashboard.
+
+## Overview
+
+This project analyzes 9,994 orders from the Sample Superstore dataset to uncover what's actually driving — and draining — profitability across categories, discount levels, regions, and customer segments. The standout finding: profitability turns negative almost exactly at the **20% discount threshold**, giving a clear, data-backed rule for future pricing decisions.
+
+**Pipeline:** `Python (Pandas) → MySQL → SQL analysis → Power BI dashboard → PDF report`
+
+## Key Insights
+
+-  **$2.30M** total sales, **$286.4K** total profit, **12.47%** overall margin
+-  Discounts above **20%** flip average profit margin negative — orders discounted 40%+ lose money at a **-108.9%** average margin
+-  **Furniture** generates nearly as much revenue as Office Supplies but returns 6–8x less profit
+-  Five states — led by **Texas** and **Ohio** — are net loss-making despite solid sales volume
+- 📅Clear seasonality, with **Sept–Dec** consistently the strongest months for sales and profit
+
+## Repository Contents
+
+| File | Description |
+|------|--------------|
+| `Superstore.ipynb` | Data cleaning & feature engineering notebook (Pandas) |
+| `Superstore_cleaned.csv` | Cleaned dataset, ready for MySQL/BI tools |
+| `superstore_queries.sql` | 10 business insight SQL queries against the MySQL `orders` table |
+| `superstore_dashboard.pbix` | 3-page interactive Power BI dashboard |
+| `Superstore_Sales_Profitability_Report.pdf` | Full written report with charts and recommendations |
+
+## Data Cleaning (Python/Pandas)
+
+- Removed duplicate rows
+- Converted `Order Date` / `Ship Date` to proper datetime types
+- Standardized `Postal Code` as text (preserving leading zeros)
+- Trimmed whitespace across all text columns
+- Standardized all column names to `snake_case`
+- Engineered new features: `shipping_duration`, `profit_margin` (%), `is_loss` flag
+
+## SQL Analysis
+
+Ten queries answer core business questions, including:
+- Overall sales, profit, and margin
+- Category & sub-category profitability
+- Discount level vs. profitability
+- State & regional performance
+- Customer segment value
+- Shipping mode vs. margin
+- Monthly sales seasonality
+
+See [`superstore_queries.sql`](./superstore_queries.sql) for the full set, each with an inline comment explaining the business question it answers.
+
+## Power BI Dashboard
+
+A 3-page interactive dashboard built on the cleaned dataset:
+
+1. **Overview** — KPI cards, sales & profit by category, segment split, monthly trend
+2. **Profitability Deep-Dive** — sub-category profit ranking, discount vs. margin, discount band analysis
+3. **Regional & Operational Performance** — state/region profitability table, shipping mode analysis, top customers
+
+## Recommendations
+
+- Cap discounts at 20% on Furniture and Office Supplies orders
+- Review Furniture pricing, particularly Tables and Bookcases
+- Investigate Texas and Ohio operations for region-specific discounting or cost issues
+- Plan promotions and inventory around the Sep–Dec peak season
+
+## Tools Used
+
+`Python` · `Pandas` · `SQLAlchemy` · `MySQL` · `Power BI` · `DAX`
+
+## Author
+
+**Hassan Jumaa (Riq)**
+Data Analyst | [Portfolio](https://riq-wq.github.io/Myportfolio) · [LinkedIn](https://linkedin.com/in/mrisa-juma-56a600416) · [GitHub](https://github.com/Riq-wq)
