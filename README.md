@@ -53,6 +53,8 @@ See superstore queries.sql for the full set, each with an inline comment explain
 
 A 3-page interactive dashboard built on the cleaned dataset:
 
+![Superstore Sales & Profitability Dashboard — Overview](assets/dashboard.png)
+
 1. **Overview** — KPI cards, sales & profit by category, segment split, monthly trend
 2. **Profitability Deep-Dive** — sub-category profit ranking, discount vs. margin, discount band analysis
 3. **Regional & Operational Performance** — state/region profitability table, shipping mode analysis, top customers
