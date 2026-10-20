@@ -30,9 +30,11 @@ This project analyzes 5,009 orders (9,994 line items) from the Sample Superstore
 
 - Verified there were no duplicate rows to remove
 - Converted `Order Date` / `Ship Date` to proper datetime types
+- Cast `Postal Code` to 5-digit text, restoring leading zeros that were lost when read as a number
 - Trimmed whitespace across all text columns
 - Standardized all column names to `snake_case`
-- Engineered new features: `shipping_duration`, `profit_margin` (%), `is_loss` flag
+- Engineered new features: `shipping_duration`, `profit_margin` (%), `cost`, and an `is_loss` flag
+- Loaded the cleaned data into MySQL as the `orders` table for SQL analysis
 
 ## SQL Analysis
 
