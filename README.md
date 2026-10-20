@@ -4,7 +4,7 @@ End-to-end data analytics pipeline on the Sample Superstore dataset — cleaned 
 
 ## Overview
 
-This project analyzes 9,994 orders from the Sample Superstore dataset to uncover what's actually driving — and draining — profitability across categories, discount levels, regions, and customer segments. The standout finding: profitability turns negative almost exactly at the **20% discount threshold**, giving a clear, data-backed rule for future pricing decisions.
+This project analyzes 5,009 orders (9,994 line items) from the Sample Superstore dataset to uncover what's actually driving — and draining — profitability across categories, discount levels, regions, and customer segments. The standout finding: profitability turns negative almost exactly at the **20% discount threshold**, giving a clear, data-backed rule for future pricing decisions.
 
 **Pipeline:** `Python (Pandas) → MySQL → SQL analysis → Power BI dashboard → PDF report`
 
@@ -20,11 +20,11 @@ This project analyzes 9,994 orders from the Sample Superstore dataset to uncover
 
 | File | Description |
 |------|--------------|
-| `Superstore.ipynb` | Data cleaning & feature engineering notebook (Pandas) |
-| `Superstore_cleaned.csv` | Cleaned dataset, ready for MySQL/BI tools |
-| `superstore_queries.sql` | 10 business insight SQL queries against the MySQL `orders` table |
-| `superstore_dashboard.pbix` | 3-page interactive Power BI dashboard |
-| `Superstore_Sales_Profitability_Report.pdf` | Full written report with charts and recommendations |
+| `notebooks/Superstore.ipynb` | Data cleaning & feature engineering notebook (Pandas) |
+| `data/Superstore_cleaned.csv` | Cleaned dataset, ready for MySQL/BI tools |
+| `sql/superstore queries.sql` | 10 business insight SQL queries against the MySQL `orders` table |
+| `dashboard/superstore dashboard.pbix` | 3-page interactive Power BI dashboard |
+| `report/Superstore_Sales_Profitability_Report.pdf` | Full written report with charts and recommendations |
 
 ## Data Cleaning (Python/Pandas)
 
