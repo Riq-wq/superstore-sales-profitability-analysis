@@ -4,17 +4,17 @@ End-to-end data analytics pipeline on the Sample Superstore dataset — cleaned 
 
 ## Overview
 
-This project analyzes 5,009 orders (9,994 line items) from the Sample Superstore dataset to uncover what's actually driving — and draining — profitability across categories, discount levels, regions, and customer segments. The standout finding: profitability turns negative almost exactly at the **20% discount threshold**, giving a clear, data-backed rule for future pricing decisions.
+This project analyzes 5,009 orders (9,994 line items) from the Sample Superstore dataset to uncover what's actually driving — and draining — profitability across categories, discount levels, regions, and customer segments. The standout finding: profitability turns negative as soon as discounts pass the **20% mark**, giving a clear, data-backed rule for future pricing decisions.
 
 **Pipeline:** `Python (Pandas) → MySQL → SQL analysis → Power BI dashboard → PDF report`
 
 ## Key Insights
 
 -  **$2.30M** total sales, **$286.4K** total profit, **12.47%** overall margin
--  Discounts above **20%** flip average profit margin negative — orders discounted 40%+ lose money at a **-108.9%** average margin
+-  Profit margin turns negative once discounts pass **20%** — the 21–40% band averages **-16.7%**, and orders discounted 40%+ lose money at a **-108.9%** average margin (mean of per-order margins within each band)
 -  **Furniture** generates nearly as much revenue as Office Supplies but returns 6–8x less profit
--  Five states — led by **Texas** and **Ohio** — are net loss-making despite solid sales volume
-- 📅Clear seasonality, with **Sept–Dec** consistently the strongest months for sales and profit
+-  Ten states — led by **Texas** and **Ohio** — are net loss-making despite solid sales volume
+- 📅 Clear seasonality, with **Sept–Dec** consistently the strongest months for sales and profit
 
 ## Repository Contents
 
@@ -28,9 +28,8 @@ This project analyzes 5,009 orders (9,994 line items) from the Sample Superstore
 
 ## Data Cleaning (Python/Pandas)
 
-- Removed duplicate rows
+- Verified there were no duplicate rows to remove
 - Converted `Order Date` / `Ship Date` to proper datetime types
-- Standardized `Postal Code` as text (preserving leading zeros)
 - Trimmed whitespace across all text columns
 - Standardized all column names to `snake_case`
 - Engineered new features: `shipping_duration`, `profit_margin` (%), `is_loss` flag

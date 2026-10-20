@@ -22,3 +22,6 @@ Thumbs.db
 # Temporary files
 *.tmp
 *.log
+
+# Generated report figures (regenerate with report/generate_report.py)
+report/figures/
