@@ -8,6 +8,25 @@ This project analyzes 5,009 orders (9,994 line items) from the Sample Superstore
 
 **Pipeline:** `Python (Pandas) → MySQL → SQL analysis → Power BI dashboard → PDF report`
 
+![Superstore Sales & Profitability Dashboard — Overview](assets/dashboard.png)
+
+## Business Problems
+
+The analysis set out to answer ten business questions:
+
+1. What is our total revenue, total profit, and overall profit margin?
+2. Which product categories are the most and least profitable?
+3. Within each category, which sub-categories are actually losing money?
+4. Is there a relationship between discount level and profitability?
+5. Which states generate the most sales, and which are actually unprofitable?
+6. How do the four regions compare in sales, profit, and order volume?
+7. Which customer segment (Consumer, Corporate, Home Office) is most valuable?
+8. Who are our highest-value customers by total spend?
+9. Does the shipping method chosen affect profit margins?
+10. Is there a seasonal pattern in sales over the year?
+
+Each question is answered with a SQL query in `sql/superstore queries.sql` and explored in the Power BI dashboard and PDF report.
+
 ## Key Insights
 
 -  **$2.30M** total sales, **$286.4K** total profit, **12.47%** overall margin
@@ -52,8 +71,6 @@ See superstore queries.sql for the full set, each with an inline comment explain
 ## Power BI Dashboard
 
 A 3-page interactive dashboard built on the cleaned dataset:
-
-![Superstore Sales & Profitability Dashboard — Overview](assets/dashboard.png)
 
 1. **Overview** — KPI cards, sales & profit by category, segment split, monthly trend
 2. **Profitability Deep-Dive** — sub-category profit ranking, discount vs. margin, discount band analysis
